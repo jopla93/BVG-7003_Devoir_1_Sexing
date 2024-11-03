@@ -1,7 +1,0 @@
-#### requirements.txt
-Ce fichier contient les dépendances du script qui doivent être installées ou importer pour son fonctionnement
-```plaintext
-pandas==1.3.5
-matplotlib==3.4.3
-seaborn==0.11.2
-numpy==1.21.4
