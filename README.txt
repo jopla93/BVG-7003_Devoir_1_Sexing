@@ -48,7 +48,7 @@ Les répertoires du projet sont trouvés à cette adresse:
 	
 https://github.com/jopla93/Sexing_Plamondon_Joelle.git
 	
-0. Faire un clone du git avec la commande :  git clone https://github.com/jopla93/Sexing_Plamondon_Joelle.git
+0. Faire un clone du git avec la commande :  git clone https://github.com/jopla93/BVG-7003_Devoir_1_Sexing.git
 
 
 1. ###Cette étape est utile si vous devez installer les dépendances###
@@ -65,7 +65,7 @@ cd /chemin/de/votre/choix    (Changer le chemin pour celui de votre choix!)
 	###Noter que la commande de l'étape suivante téléchargera automatiquement les figures et les résultats du sexing directement dans le répertoire désigné###
 
 3. Exécuter le script Plamondon_Joelle_Devoir1.py présent dans le dossier Script/ avec la commande :
-		python3 chemin/vers/clone/git/Sexing_Plamondon_Joelle/Script/Plamondon_Joelle_Devoir1.py (changer pour votre chemin!)
+		python3 chemin/vers/clone/git/BVG-7003_Devoir_1_Sexing/Script/Plamondon_Joelle_Devoir1.py (changer pour votre chemin!)
 
 	Le script demande où aller chercher le fichier .csv contenant les données brutes. Assurer vous d'inscrire le fichier absolu pour l'emplacement des données, reconnaissable par BASH. 
 	
