@@ -3,6 +3,7 @@
 
 Cas d'utilisation :
 	Le script contient différentes fonctions. Celles-ci permettent de :
+ 
 	(1) Importer des données à partir d'un fichier .csv qui contient des données d'expression de gènes normalisés de plantes
 	
 	(2) Filtrer les données afin de produire des tableaux selon les gènes sélectionnés. Dans le script, les tableaux réalisés permettent de filtrer les gènes REM16 et FT1 selon leur numéro d'identifiant en fonction de leur sexe. 1 tableau est produit avec le gène REM16 filtré, 1 autre avec le gène FT1 filtré et un troisième tableau qui contient les données pour les 2 gènes.
