@@ -3,7 +3,7 @@
 
 Cas d'utilisation :
 	Le script contient différentes fonctions. Celles-ci permettent de :
-	(1) Importer des données à partir d'un fichier .csv qui contient des données d'expression de gènes normalisés de plantes en fournissant un chemin d'accès spécifié par l'utilisateur.
+	(1) Importer des données à partir d'un fichier .csv qui contient des données d'expression de gènes normalisés de plantes
 	
 	(2) Filtrer les données afin de produire des tableaux selon les gènes sélectionnés. Dans le script, les tableaux réalisés permettent de filtrer les gènes REM16 et FT1 selon leur numéro d'identifiant en fonction de leur sexe. 1 tableau est produit avec le gène REM16 filtré, 1 autre avec le gène FT1 filtré et un troisième tableau qui contient les données pour les 2 gènes.
 
@@ -58,18 +58,14 @@ Ouvrez votre terminal et copier cette commande pour créer un environnement dans
 		source requirements_sexing/bin/activate
 		pip install pandas matplotlib seaborn numpy		
 
-2. Déplacez vous dans le répertoire où vous désirez effectuer l'analyse avec la commande: 
+2. Déplacez vous dans le répertoire où vous avez cloné le github: 
 		
-cd /chemin/de/votre/choix    (Changer le chemin pour celui de votre choix!)
+cd /chemin/du/github/BVG-7003_Devoir_1_Sexing    (Changer le chemin pour celui de votre choix si vous changez de fichié analysé)
 
 	###Noter que la commande de l'étape suivante téléchargera automatiquement les figures et les résultats du sexing directement dans le répertoire désigné###
 
 3. Exécuter le script Plamondon_Joelle_Devoir1.py présent dans le dossier Script/ avec la commande :
-		python3 chemin/vers/clone/git/BVG-7003_Devoir_1_Sexing/Script/Plamondon_Joelle_Devoir1.py (changer pour votre chemin!)
-
-	Le script demande où aller chercher le fichier .csv contenant les données brutes. Assurer vous d'inscrire le fichier absolu pour l'emplacement des données, reconnaissable par BASH. 
-	
-	Par exemple: " /mnt/c/Users/joell/Documents/Bioinfo/2_Data_RNASeq_Cannabis_Sex/2_Data_RNASeq_Cannabis_Sex.csv"
+		python3 Script/Plamondon_Joelle_Devoir1.py (changer pour votre chemin si analyse d'un fichier différent)
 
 	Le script demande pour chaque figure et tableau si vous voulez le télécharger. Si oui, les fichiers seront téléchargés dans le répertoire courant et son chemin d'accès vous sera indiqué. Sinon, le téléchargement de la figure sera annulé. La question est demandée pour tous les fichiers (4).
 
