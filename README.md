@@ -4,18 +4,17 @@
 Cas d'utilisation :
 Le script contient différentes fonctions. Celles-ci permettent de :
  
-(1) Importer des données à partir d'un fichier .csv qui contient des données d'expression de gènes normalisés de plantes
+1. Importer des données à partir d'un fichier .csv qui contient des données d'expression de gènes normalisés de plantes
 	
-(2) Filtrer les données afin de produire des tableaux selon les gènes sélectionnés. Dans le script, les tableaux réalisés permettent de filtrer les gènes REM16 et FT1 selon leur numéro d'identifiant en fonction de leur sexe. 1 tableau est produit avec le gène REM16 filtré, 1 autre avec le gène FT1 filtré et un troisième tableau qui contient les données pour les 2 gènes.
+2. Filtrer les données afin de produire des tableaux selon les gènes sélectionnés. Dans le script, les tableaux réalisés permettent de filtrer les gènes REM16 et FT1 selon leur numéro d'identifiant en fonction de leur sexe. 1 tableau est produit avec le gène REM16 filtré, 1 autre avec le gène FT1 filtré et un troisième tableau qui contient les données pour les 2 gènes.
 
-(3) Faire les figures de l'expression des gènes d'intérêt en fonction du sexe des plants. Trois boxplots sont produit: un pour l'expression du gène REM16 en fonction du sexe, un pour l'expression du gène FT1 en fonction du sexe et un dernier qui donne l'expression des gènes REM16 et FT1 en fonction du sexe des plants.
+3. Faire les figures de l'expression des gènes d'intérêt en fonction du sexe des plants. Trois boxplots sont produit: un pour l'expression du gène REM16 en fonction du sexe, un pour l'expression du gène FT1 en fonction du sexe et un dernier qui donne l'expression des gènes REM16 et FT1 en fonction du sexe des plants.
 
-(4) Sauvegarder les figures dans le répertoire courant selon la décision de l'utilisateur
+4. Sauvegarder les figures dans le répertoire courant selon la décision de l'utilisateur
 
-(5) Faire le sexing à partir de données d'expression normalisées brutes. La fonction produit un fichier excel qui permet directement de sexer les plants en utilisant l'expression du gène REM16. Le gène FT1 est utilisé comme gène de référence pour le contrôle de qualité de l'expérience.
+5. Faire le sexing à partir de données d'expression normalisées brutes. La fonction produit un fichier excel qui permet directement de sexer les plants en utilisant l'expression du gène REM16. Le gène FT1 est utilisé comme gène de référence pour le contrôle de qualité de l'expérience.
 
-(6) Sauvegarder le fichier excel dans le répertoire courant selon la décision de l'utilisateur
-
+6. Sauvegarder le fichier excel dans le répertoire courant selon la décision de l'utilisateur
 
 Données d'entrée : 
 
