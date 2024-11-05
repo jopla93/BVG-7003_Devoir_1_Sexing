@@ -82,8 +82,9 @@ En répondant "yes" pour tout, vous obtiendrez dans le répertoire courant:
 
 Dans le terminal s'affichent les 5 premières lignes et les 5 dernières lignes des dataframes utilisés pour les figures et le sexing
 
-4. Vous pouvez changer les fichiers d'emplacement si vous le désirez avec le code suivant en spécifiant le chemin que vous voulez
-   mv FT1_expression.png FT1_REM16_expression.png REM16_expression.png sexing_cannabis.csv /chemin/que/vous/voulez
+4. Vous pouvez changer les fichiers d'emplacement si vous le désirez avec le code suivant en spécifiant le chemin que vous voulez.
+
+	mv FT1_expression.png FT1_REM16_expression.png REM16_expression.png sexing_cannabis.csv /chemin/que/vous/voulez
 
 Pour les résultats du sexing à partir des données brutes, voici comment les interpréter: 
 Le dataframe nommé sexing_df donne un tableau qui donne l'identifiant du plant, le sexe et le contrôle. Le sexe est déterminé en fonction du seuil de 9,6 pour l'expression de REM16. La colonne "Sexe" indique "F" si les résultats de l'expression de REM16 correspondent à ceux d'un plant femelle et "M" si les résultats de l'expression de REM15 correspondent à ceux d'un plant mâle.
