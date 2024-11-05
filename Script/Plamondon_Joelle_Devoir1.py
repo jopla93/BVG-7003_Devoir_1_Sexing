@@ -9,9 +9,8 @@ import seaborn as sns
 import numpy as np
 
 #importation du fichier .CSV
-# Pour entrer le chemin du fichier CSV selon l'utilisateur
-file_path = input("entrez le path absolu du fichier qui est reconnu par BASH : ")
-file_path = file_path.strip('"\'') #Permet de copier coller le path sans erreur
+# définition chemin du fichier .csv dans le clone git
+file_path = "Data/2_Data_RNASeq_Cannabis_Sex.csv"
 data = pd.read_csv(file_path)
 
 # fonction pour filtrer les données
