@@ -1,42 +1,42 @@
 ###Note: Je n'avais jamais utilisé python de ma vie et je voulais essayer quelque chose de différent de R. J'ai donc refait l'analyse qu'on avait fait en classe, mais avec python. C'est pourquoi mon code est probablement structuré étrangement.
 
 
-Cas d'utilisation :
-	Le script contient différentes fonctions. Celles-ci permettent de :
+#Cas d'utilisation :
+Le script contient différentes fonctions. Celles-ci permettent de :
  
-	(1) Importer des données à partir d'un fichier .csv qui contient des données d'expression de gènes normalisés de plantes
+(1) Importer des données à partir d'un fichier .csv qui contient des données d'expression de gènes normalisés de plantes
 	
-	(2) Filtrer les données afin de produire des tableaux selon les gènes sélectionnés. Dans le script, les tableaux réalisés permettent de filtrer les gènes REM16 et FT1 selon leur numéro d'identifiant en fonction de leur sexe. 1 tableau est produit avec le gène REM16 filtré, 1 autre avec le gène FT1 filtré et un troisième tableau qui contient les données pour les 2 gènes.
+(2) Filtrer les données afin de produire des tableaux selon les gènes sélectionnés. Dans le script, les tableaux réalisés permettent de filtrer les gènes REM16 et FT1 selon leur numéro d'identifiant en fonction de leur sexe. 1 tableau est produit avec le gène REM16 filtré, 1 autre avec le gène FT1 filtré et un troisième tableau qui contient les données pour les 2 gènes.
 
-	(3) Faire les figures de l'expression des gènes d'intérêt en fonction du sexe des plants. Trois boxplots sont produit: un pour l'expression du gène REM16 en fonction du sexe, un pour l'expression du gène FT1 en fonction du sexe et un dernier qui donne l'expression des gènes REM16 et FT1 en fonction du sexe des plants.
+(3) Faire les figures de l'expression des gènes d'intérêt en fonction du sexe des plants. Trois boxplots sont produit: un pour l'expression du gène REM16 en fonction du sexe, un pour l'expression du gène FT1 en fonction du sexe et un dernier qui donne l'expression des gènes REM16 et FT1 en fonction du sexe des plants.
 
-	(4) Sauvegarder les figures dans le répertoire courant selon la décision de l'utilisateur
+(4) Sauvegarder les figures dans le répertoire courant selon la décision de l'utilisateur
 
-	(5) Faire le sexing à partir de données d'expression normalisées brutes. La fonction produit un fichier excel qui permet directement de sexer les plants en utilisant l'expression du gène REM16. Le gène FT1 est utilisé comme gène de référence pour le contrôle de qualité de l'expérience.
+(5) Faire le sexing à partir de données d'expression normalisées brutes. La fonction produit un fichier excel qui permet directement de sexer les plants en utilisant l'expression du gène REM16. Le gène FT1 est utilisé comme gène de référence pour le contrôle de qualité de l'expérience.
 
-	(6) Sauvegarder le fichier excel dans le répertoire courant selon la décision de l'utilisateur
+(6) Sauvegarder le fichier excel dans le répertoire courant selon la décision de l'utilisateur
 
 
-Données d'entrée : 
+##Données d'entrée : 
 	Le fichier d'entrée est un fichier excel de données transcriptomiques normalisées avec des "," comme séparateur entre les colonnes. La première colonne du tableau contient les identifiants (ID) des gènes. La première ligne du tableau contient les identifiants (num) des plantes suivi de leur sexe (XX ou XY) dans le format suivant: num_XX pour un plant femelle ou num_XY pour un plant mâle. Chaque colonne correspond donc à l plant et ses données transcriptomiques pour chacun des gènes. Pour les fonctions qui permettent de faire le sexing (5 et 6), le fichier d'entrée n'a pas besoin d'avoir des plantes dont le sexe est déjà déterminé. Seul un identifiant de plante (num) doit être présent dans la première ligne du fichier.
 
 
-Résultats : 
+##Résultats : 
 ###Note: Tous les résultats décrits sont générés avec le fichier nommé "2_Data_RNASeq_Cannabis_Sex" présent dans le répertoire data/ du GitHub###
 
-	Les données filtrées avec le gène REM16 donnent un tableau de 138 lignes x 5 colonnes, qui donnent le gène (REM16), l'ID, l'expression, le sexe et la combinaison du gène et du sexe pour tous les plants. Le tableau est nommé data_REM16 dans le script.
+Les données filtrées avec le gène REM16 donnent un tableau de 138 lignes x 5 colonnes, qui donnent le gène (REM16), l'ID, l'expression, le sexe et la combinaison du gène et du sexe pour tous les plants. Le tableau est nommé data_REM16 dans le script.
 
-	Les données filtrées avec le gène FT1 donnent un tableau de 138 lignes x 5 colonnes, qui donnent le gène (FT1), l'ID, l'expression, le sexe et la combinaison du gène et du sexe pour tous les plants. Le tableau est nommé data_FT1 dans le script.
+Les données filtrées avec le gène FT1 donnent un tableau de 138 lignes x 5 colonnes, qui donnent le gène (FT1), l'ID, l'expression, le sexe et la combinaison du gène et du sexe pour tous les plants. Le tableau est nommé data_FT1 dans le script.
 
-	Les données filtrées avec les gènes FT1 et REM16 donnent un tableau de 276 lignes x 5 colonnes, qui donnent le gène (FT1 ou REM16), l'ID, l'expression, le sexe et la combinaison du gène et du sexe pour tous les plants. Le tableau est nommé data_filtered dans le script.
+Les données filtrées avec les gènes FT1 et REM16 donnent un tableau de 276 lignes x 5 colonnes, qui donnent le gène (FT1 ou REM16), l'ID, l'expression, le sexe et la combinaison du gène et du sexe pour tous les plants. Le tableau est nommé data_filtered dans le script.
 
-	fig1 : Les résultats du graphique de l'expression de REM16 en fonction du sexe montre une différence de l'expression du gène entre les plants mâles et les plants  femelles. Au delà d'une expression normalisée de 9,6 pour ce gène, il apparaît sur le graphique généré que les plants sont femelle et en bas du seuil, les plants sont mâles.
+fig1 : Les résultats du graphique de l'expression de REM16 en fonction du sexe montre une différence de l'expression du gène entre les plants mâles et les plants  femelles. Au delà d'une expression normalisée de 9,6 pour ce gène, il apparaît sur le graphique généré que les plants sont femelle et en bas du seuil, les plants sont mâles.
 
-	fig2 : La figure du graphique de l'expression de FT1 en fonction du sexe montre que son expression est stable entre les plants indépendamment du sexe. Les niveaux d'expression normalisés sont plus grands que 5 dans tous les cas et ne varient pas différemment en fonction du sexe des plants.
+fig2 : La figure du graphique de l'expression de FT1 en fonction du sexe montre que son expression est stable entre les plants indépendamment du sexe. Les niveaux d'expression normalisés sont plus grands que 5 dans tous les cas et ne varient pas différemment en fonction du sexe des plants.
 
-	fig3 : La figure du graphique de l'expression de FT1 et REM16 en fonction du sexe montre que les niveaux d'expression de FT1 ne diffèrent pas entre le sexe des plants. De plus, les niveaux d'expression de REM16 sont plus élevés que ceux de FT1 pour les plants mâles et les plants femelles. Enfin, les niveaux d'expression de REM16 sont plus élevés dans les plants femelles que les plants mâles.
+fig3 : La figure du graphique de l'expression de FT1 et REM16 en fonction du sexe montre que les niveaux d'expression de FT1 ne diffèrent pas entre le sexe des plants. De plus, les niveaux d'expression de REM16 sont plus élevés que ceux de FT1 pour les plants mâles et les plants femelles. Enfin, les niveaux d'expression de REM16 sont plus élevés dans les plants femelles que les plants mâles.
 
-	Le dataframe nommé sexing_df donne un tableau de 138 lignes x 3 colonnes, qui donnent l'identifiant du plant, le sexe et le contrôle. Les résultats montrent que le gène de référence utilisé démontre qu'il n'y a pas de problème majeur avec l'expérience, car un + est présent dans toutes les cases du tableau. Pour la colonne sexe, on peut voir qu'il correspond avec le sexe identifié pour tous les plants, ce qui démontre que la fonction de sexing fonctionne pour ce jeu de donnée.
+Le dataframe nommé sexing_df donne un tableau de 138 lignes x 3 colonnes, qui donnent l'identifiant du plant, le sexe et le contrôle. Les résultats montrent que le gène de référence utilisé démontre qu'il n'y a pas de problème majeur avec l'expérience, car un + est présent dans toutes les cases du tableau. Pour la colonne sexe, on peut voir qu'il correspond avec le sexe identifié pour tous les plants, ce qui démontre que la fonction de sexing fonctionne pour ce jeu de donnée.
 
 
 Instructions pour l'utilisation du script avec le fichier "2_Data_RNASeq_Cannabis_Sex" :
@@ -61,18 +61,19 @@ Ouvrez votre terminal et copier cette commande pour créer un environnement dans
 
 2. Déplacez vous dans le répertoire où vous avez cloné le github: 
 		
-cd /chemin/du/github/BVG-7003_Devoir_1_Sexing    (Changer le chemin pour celui de votre choix si vous changez de fichié analysé)
+	cd /chemin/du/github/BVG-7003_Devoir_1_Sexing    #(Changer le chemin pour celui de votre choix si vous changez de fichié analysé)
 
-	###Noter que la commande de l'étape suivante téléchargera automatiquement les figures et les résultats du sexing directement dans le répertoire désigné###
+###Noter que la commande de l'étape suivante téléchargera automatiquement les figures et les résultats du sexing directement dans le répertoire désigné###
 
 3. Exécuter le script Plamondon_Joelle_Devoir1.py présent dans le dossier Script/ avec la commande :
-		python3 Script/Plamondon_Joelle_Devoir1.py (changer pour votre chemin si analyse d'un fichier différent)
 
-	Le script demande pour chaque figure et tableau si vous voulez le télécharger. Si oui, les fichiers seront téléchargés dans le répertoire courant et son chemin d'accès vous sera indiqué. Sinon, le téléchargement de la figure sera annulé. La question est demandée pour tous les fichiers (4).
+		python3 Script/Plamondon_Joelle_Devoir1.py #(changer pour votre chemin si analyse d'un fichier différent)
+
+Le script demande pour chaque figure et tableau si vous voulez le télécharger. Si oui, les fichiers seront téléchargés dans le répertoire courant et son chemin d'accès vous sera indiqué. Sinon, le téléchargement de la figure sera annulé. La question est demandée pour tous les fichiers (4).
 
 En répondant "yes" pour tout, vous obtiendrez dans le répertoire courant: 
-		3 images .png qui correspondent aux figures d'expression des gènes REM16 et FT1 en fonction du sexe
-		1 fichier .csv qui contient les résultats du sexing
+3 images .png qui correspondent aux figures d'expression des gènes REM16 et FT1 en fonction du sexe
+1 fichier .csv qui contient les résultats du sexing
 
 Dans le terminal s'affichent les 5 premières lignes et les 5 dernières lignes des dataframes utilisés pour les figures et le sexing
 
