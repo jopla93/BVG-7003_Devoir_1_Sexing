@@ -83,6 +83,7 @@ En répondant "yes" pour tout, vous obtiendrez dans le répertoire courant:
 Dans le terminal s'affichent les 5 premières lignes et les 5 dernières lignes des dataframes utilisés pour les figures et le sexing
 
 4. Vous pouvez changer les fichiers d'emplacement si vous le désirez avec le code suivant en spécifiant le chemin que vous voulez.
+   
 		mv FT1_expression.png FT1_REM16_expression.png REM16_expression.png sexing_cannabis.csv /chemin/que/vous/voulez
 
 Pour les résultats du sexing à partir des données brutes, voici comment les interpréter: 
