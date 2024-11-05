@@ -1,7 +1,7 @@
 ###Note: Je n'avais jamais utilisé python de ma vie et je voulais essayer quelque chose de différent de R. J'ai donc refait l'analyse qu'on avait fait en classe, mais avec python. C'est pourquoi mon code est probablement structuré étrangement.
 
 
-#Cas d'utilisation :
+Cas d'utilisation :
 Le script contient différentes fonctions. Celles-ci permettent de :
  
 (1) Importer des données à partir d'un fichier .csv qui contient des données d'expression de gènes normalisés de plantes
@@ -17,11 +17,13 @@ Le script contient différentes fonctions. Celles-ci permettent de :
 (6) Sauvegarder le fichier excel dans le répertoire courant selon la décision de l'utilisateur
 
 
-##Données d'entrée : 
-	Le fichier d'entrée est un fichier excel de données transcriptomiques normalisées avec des "," comme séparateur entre les colonnes. La première colonne du tableau contient les identifiants (ID) des gènes. La première ligne du tableau contient les identifiants (num) des plantes suivi de leur sexe (XX ou XY) dans le format suivant: num_XX pour un plant femelle ou num_XY pour un plant mâle. Chaque colonne correspond donc à l plant et ses données transcriptomiques pour chacun des gènes. Pour les fonctions qui permettent de faire le sexing (5 et 6), le fichier d'entrée n'a pas besoin d'avoir des plantes dont le sexe est déjà déterminé. Seul un identifiant de plante (num) doit être présent dans la première ligne du fichier.
+Données d'entrée : 
+
+Le fichier d'entrée est un fichier excel de données transcriptomiques normalisées avec des "," comme séparateur entre les colonnes. La première colonne du tableau contient les identifiants (ID) des gènes. La première ligne du tableau contient les identifiants (num) des plantes suivi de leur sexe (XX ou XY) dans le format suivant: num_XX pour un plant femelle ou num_XY pour un plant mâle. Chaque colonne correspond donc à l plant et ses données transcriptomiques pour chacun des gènes. Pour les fonctions qui permettent de faire le sexing (5 et 6), le fichier d'entrée n'a pas besoin d'avoir des plantes dont le sexe est déjà déterminé. Seul un identifiant de plante (num) doit être présent dans la première ligne du fichier.
 
 
-##Résultats : 
+Résultats : 
+
 ###Note: Tous les résultats décrits sont générés avec le fichier nommé "2_Data_RNASeq_Cannabis_Sex" présent dans le répertoire data/ du GitHub###
 
 Les données filtrées avec le gène REM16 donnent un tableau de 138 lignes x 5 colonnes, qui donnent le gène (REM16), l'ID, l'expression, le sexe et la combinaison du gène et du sexe pour tous les plants. Le tableau est nommé data_REM16 dans le script.
