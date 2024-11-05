@@ -48,7 +48,7 @@ Prérequis: Python 3.6 ou plus récent
 
 Les répertoires du projet sont trouvés à cette adresse: 
 	
-https://github.com/jopla93/Sexing_Plamondon_Joelle.git
+https://github.com/jopla93/BVG_7003_Devoir_1_Sexing.git
 	
 0. Faire un clone du git avec la commande :  git clone https://github.com/jopla93/BVG-7003_Devoir_1_Sexing.git
 
@@ -77,6 +77,8 @@ En répondant "yes" pour tout, vous obtiendrez dans le répertoire courant:
 1 fichier .csv qui contient les résultats du sexing
 
 Dans le terminal s'affichent les 5 premières lignes et les 5 dernières lignes des dataframes utilisés pour les figures et le sexing
+
+4. Pour ouvrir les fichiers .png 
 
 Pour les résultats du sexing à partir des données brutes, voici comment les interpréter: 
 Le dataframe nommé sexing_df donne un tableau qui donne l'identifiant du plant, le sexe et le contrôle. Le sexe est déterminé en fonction du seuil de 9,6 pour l'expression de REM16. La colonne "Sexe" indique "F" si les résultats de l'expression de REM16 correspondent à ceux d'un plant femelle et "M" si les résultats de l'expression de REM15 correspondent à ceux d'un plant mâle.
