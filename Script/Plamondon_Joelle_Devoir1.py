@@ -8,10 +8,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 
-#importation du fichier .CSV
-# définition chemin du fichier .csv dans le clone git
-file_path = "Data/2_Data_RNASeq_Cannabis_Sex.csv"
-data = pd.read_csv(file_path)
+
+file_path = "Data/2_Data_RNASeq_Cannabis_Sex.csv" # définition du chemin du fichier .csv dans le clone git
+data = pd.read_csv(file_path) #variable data assignée au fichier .csv
 
 # fonction pour filtrer les données
 def filter_data():
