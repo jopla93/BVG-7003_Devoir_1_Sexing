@@ -9,7 +9,7 @@ import seaborn as sns
 import numpy as np
 
 
-file_path = "Data/2_Data_RNASeq_Cannabis_Sex.csv" # définition du chemin du fichier .csv dans le clone git. Changer le nom du fichier ici si le fichier à analyser est à un autre emplacement
+file_path = "Data/2_Data_RNASeq_Cannabis_Sex.csv" # définition du chemin du fichier .csv dans le clone git. Changer le chemin et/ou le nom du fichier ici au besoin
 data = pd.read_csv(file_path) #variable data assignée au fichier .csv
 
 # fonction pour filtrer les données
