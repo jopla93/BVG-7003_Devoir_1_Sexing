@@ -9,7 +9,7 @@ import seaborn as sns
 import numpy as np
 
 
-file_path = "Data/2_Data_RNASeq_Cannabis_Sex.csv" # définition du chemin du fichier .csv dans le clone git
+file_path = "Data/2_Data_RNASeq_Cannabis_Sex.csv" # définition du chemin du fichier .csv dans le clone git. Changer le nom du fichier ici si le fichier à analyser est à un autre emplacement
 data = pd.read_csv(file_path) #variable data assignée au fichier .csv
 
 # fonction pour filtrer les données
@@ -58,7 +58,7 @@ def save_graph(fig, filename):
     print(f"Le graphique a été enregistré sous le nom '{filename}'. Vous pouvez le trouver ici : {file_path}") #donne l'emplacement du telechargement
     plt.close(fig)
 
-def figure(data_REM16, data_FT1, data_filtered):
+def figure(df_REM16, df_FT1, df_filtered):
     palette = {'FT1': 'blue', 'REM16': 'orange', 'REM16_female' : 'orange', 'REM16_male': 'orange', 'FT1_female': 'blue', 'FT1_male': 'blue'}
     # Graphique pour REM16
     fig1=plt.figure() #crée la nouvelle figure nommée fig1
@@ -147,13 +147,16 @@ def sexing(data):
 resultat = sexing(data) #Appel de la fonction sexing pour montrer le résultat du dataframe dans le terminal
 print(resultat)
 
-from PIL import Image 
-# Ouvre les images individuellement
-image1 = Image.open('FT1_expression.png')
-image2 = Image.open('REM16_expression.png')
-image3 = Image.open('FT1_REM16_expression.png')
+def sexing_results(df):
+    # Compte le nombre de mâles et femelles où le contrôle est '+'
+    males = resultat[(resultat['Sexe'] == 'M') & (resultat['Controle'] == '+')].shape[0]
+    females = resultat[(resultat['Sexe'] == 'F') & (resultat['Controle'] == '+')].shape[0]
 
-# Affiche les images
-image1.show()
-image2.show()
-image3.show()
+    # Compte le nombre d'échantillons non confirmés (contrôle '-')
+    unconfirmed = resultat[resultat[('Controle')] == '-'].shape[0]
+
+    # Imprime les résultats
+    print(
+        f"Sexing complete. {males} mâles ont été identifiés et {females} femelles ont été identifiées. {unconfirmed} échantillons n'ont pas été confirmés.")
+
+sexing_results(resultat)
