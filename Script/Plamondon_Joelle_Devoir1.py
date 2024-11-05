@@ -146,3 +146,14 @@ def sexing(data):
 
 resultat = sexing(data) #Appel de la fonction sexing pour montrer le résultat du dataframe dans le terminal
 print(resultat)
+
+from PIL import Image 
+# Ouvre les images individuellement
+image1 = Image.open('FT1_expression.png')
+image2 = Image.open('REM16_expression.png')
+image3 = Image.open('FT1_REM16_expression.png')
+
+# Affiche les images
+image1.show()
+image2.show()
+image3.show()
