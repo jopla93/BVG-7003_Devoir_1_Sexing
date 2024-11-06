@@ -77,8 +77,9 @@ Copier ces commandes dans le terminal pour créer un environnement dans lequel l
 Le script demande pour chaque figure et tableau si vous voulez le télécharger. Si oui, les fichiers seront téléchargés dans le répertoire courant et son chemin d'accès vous sera indiqué. Sinon, le téléchargement de la figure sera annulé. La question est demandée pour tous les fichiers (4).
 
 En répondant "yes" pour tout, vous obtiendrez dans le répertoire courant: 
-3 images .png qui correspondent aux figures d'expression des gènes REM16 et FT1 en fonction du sexe
-1 fichier .csv qui contient les résultats du sexing
+# 3 images .png qui correspondent aux figures d'expression des gènes REM16 et FT1 en fonction du sexe
+
+# 1 fichier .csv qui contient les résultats du sexing
 
 Dans le terminal s'affichent les 5 premières lignes et les 5 dernières lignes des dataframes utilisés pour les figures et le sexing
 
