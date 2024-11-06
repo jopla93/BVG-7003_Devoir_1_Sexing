@@ -1,7 +1,7 @@
 ###Note: Je n'avais jamais utilisé python de ma vie et je voulais essayer quelque chose de différent de R. J'ai donc refait l'analyse qu'on avait fait en classe, mais avec python. C'est pourquoi mon code est probablement structuré étrangement.
 
 
-Cas d'utilisation :
+# Cas d'utilisation :
 Le script contient différentes fonctions. Celles-ci permettent de :
  
 1. Importer des données à partir d'un fichier .csv qui contient des données d'expression de gènes normalisés de plantes
@@ -18,12 +18,12 @@ Le script contient différentes fonctions. Celles-ci permettent de :
 
 7. Indiquer le nombre de plants mâles et le nombre de plants femelles où le contrôle est positif et indiquer combien de cas où le contrôle est négatif.
 
-Données d'entrée : 
+# Données d'entrée : 
 
 Le fichier d'entrée est un fichier excel de données transcriptomiques normalisées avec des "," comme séparateur entre les colonnes. La première colonne du tableau contient les identifiants (ID) des gènes. La première ligne du tableau contient les identifiants (num) des plantes suivi de leur sexe (XX ou XY) dans le format suivant: num_XX pour un plant femelle ou num_XY pour un plant mâle. Chaque colonne correspond donc à l plant et ses données transcriptomiques pour chacun des gènes. Pour les fonctions qui permettent de faire le sexing (5 et 6), le fichier d'entrée n'a pas besoin d'avoir des plantes dont le sexe est déjà déterminé. Seul un identifiant de plante (num) doit être présent dans la première ligne du fichier.
 
 
-Résultats : 
+# Résultats : 
 
 ###Note: Tous les résultats décrits sont générés avec le fichier nommé "2_Data_RNASeq_Cannabis_Sex" présent dans le répertoire data/ du GitHub###
 
@@ -44,7 +44,7 @@ Résultats :
 (6) Le résultat du sexing est affiché dans le terminal, indiquant qu'il y a 69 mâles, 69 femelles et 0 échantillons non confirmés.
 
 
-Instructions pour l'utilisation du script avec le fichier "2_Data_RNASeq_Cannabis_Sex" :
+# Instructions pour l'utilisation du script avec le fichier "2_Data_RNASeq_Cannabis_Sex" :
 	
 Ce projet contient un script Python qui utilise les dépendances pandas, os, matplotlib, et seaborn.
 Prérequis: Python 3.6 ou plus récent
@@ -53,7 +53,7 @@ Les répertoires du projet sont trouvés à cette adresse:
 	https://github.com/jopla93/BVG_7003_Devoir_1_Sexing.git
 
 
-0.  ###Cette étape est utile si vous devez installer les dépendances###
+0.  ###Cette étape est utile si vous devez installer les dépendances dans un nouvel environnement###
 Copier ces commandes dans le terminal pour créer un environnement dans lequel les dépendances peuvent être installées : 
 
 		python3 -m venv requirements_sexing
@@ -61,7 +61,7 @@ Copier ces commandes dans le terminal pour créer un environnement dans lequel l
 		pip install pandas matplotlib seaborn numpy
 
 
-1. Faire un clone du git avec la commande :  git clone https://github.com/jopla93/BVG-7003_Devoir_1_Sexing.git
+1. Faire un clone du git à l'endroit de votre choix avec la commande :  git clone https://github.com/jopla93/BVG-7003_Devoir_1_Sexing.git
 		
 
 2. Déplacez vous dans le répertoire où vous avez cloné le github: 
@@ -77,9 +77,9 @@ Copier ces commandes dans le terminal pour créer un environnement dans lequel l
 Le script demande pour chaque figure et tableau si vous voulez le télécharger. Si oui, les fichiers seront téléchargés dans le répertoire courant et son chemin d'accès vous sera indiqué. Sinon, le téléchargement de la figure sera annulé. La question est demandée pour tous les fichiers (4).
 
 En répondant "yes" pour tout, vous obtiendrez dans le répertoire courant: 
-# 3 images .png qui correspondent aux figures d'expression des gènes REM16 et FT1 en fonction du sexe
+ 3 images .png qui correspondent aux figures d'expression des gènes REM16 et FT1 en fonction du sexe
 
-# 1 fichier .csv qui contient les résultats du sexing
+ 1 fichier .csv qui contient les résultats du sexing
 
 Dans le terminal s'affichent les 5 premières lignes et les 5 dernières lignes des dataframes utilisés pour les figures et le sexing
 
